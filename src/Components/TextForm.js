@@ -51,11 +51,11 @@ export default function TextForm(props) {
         props.showAlert("Extra spaces removed", "success")
     }
 
-    function wordcounter() {
-        // let wordNumber = text.split(/\s+/).filter(
-        //     function (n) { return n !==''}
-        // ).length;
-        return null;
+    function wordCounter(text) {
+        let wordNumber = text.split(/\s+/).filter(
+            function (n) { return n !== ''}
+        ).length;
+        return wordNumber;
     }
 
     return (
@@ -92,8 +92,8 @@ export default function TextForm(props) {
             </div>
             <div className="container my-1" style={{ color: (props.mode === 'dark' ? 'white' : 'black') }}>
                 <h3 className="my-1">Your text summary :</h3>
-                <p className="my-1" >There are <b>{wordcounter(text)}</b> words and {text.length} characters</p>
-                <p>You can read these words in {(0.008 * wordcounter(text)).toPrecision(2)} minutes </p>
+                <p className="my-1" >There are <b>{wordCounter(text)}</b> words and {text.length} characters</p>
+                <p>You can read these words in {(0.008 * wordCounter(text)).toPrecision(2)} minutes </p>
                 <h2>Preview : </h2>
                 <p>{text.length > 0 ? text : "Enter something in the text Box to preview here"}</p>
             </div>

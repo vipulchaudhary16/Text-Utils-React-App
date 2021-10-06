@@ -2,7 +2,6 @@ import About from "./Components/About";
 import Navbar from "./Components/Navbar";
 import TextForm from "./Components/TextForm";
 import FindAndReplce from "./Components/Find";
-import Home from './Components/Home'
 //imrs
 import React, { useState } from 'react'
 import Alert from "./Components/Alert";
@@ -44,23 +43,15 @@ function App() {
         <Alert alert={alert} />
         <div className="container">
           <Switch>
-
-            <Route exact path="/about">
-              <About mode={mode} />
-            </Route>
-
-            <Route exact path="/home">
-              <Home />
-            </Route>
-
-            <Route exact path="/">
+            <Route exact path="/Text-Utils-React-App">
               <TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} />
             </Route>
-
             <Route exact path="/findAndReplace">
               <FindAndReplce  mode={mode} />
             </Route>
-
+            <Route exact path="/about">
+              <About mode={mode} />
+            </Route>
           </Switch>
         </div>
       </Router>
