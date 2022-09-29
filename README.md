@@ -6,8 +6,6 @@
   - Convert to Lowercase
   - Remove Redudant spaces
   - Copy To Clipboard
-  - Encryption - Decription Message
-  
 
 ### Tech Stack :
   - ReactJS
