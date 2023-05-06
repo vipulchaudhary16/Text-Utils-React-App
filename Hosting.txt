@@ -1,4 +1,0 @@
-"homepage": "https://vipulchaudhary16.github.io/Text-Utils-React-App",
-
- "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
