@@ -43,7 +43,7 @@ function App() {
         <Alert alert={alert} />
         <div className="container">
           <Switch>
-            <Route exact path="/Text-Utils-React-App">
+            <Route exact path="/">
               <TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} />
             </Route>
             <Route exact path="/findAndReplace">
